@@ -1,0 +1,139 @@
+.thumbnail{
+    width: 100%;
+}
+
+.video-title{
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px; 
+}
+
+.video-author,
+.video-stats{
+    font-size: 12px;
+    color: #606060;
+}
+
+.video-author{
+    margin-bottom: 5px;
+}
+
+.video-preview{
+    margin-left: 0;
+}
+
+.a-v2{
+    display: grid;
+    grid-template-columns: 50px 1fr; 
+}
+
+.channel-dp{
+    vertical-align: top;
+    height: 34px;
+    width: 34px;
+    position: relative;
+}
+
+.dp-tooltip-container{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(228, 228, 228);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    left: 0;
+    bottom: -72.5px;
+    opacity: 0;
+    transition: opacity 0.15s;
+    white-space: nowrap;
+    pointer-events: none;
+    z-index: 999;
+}
+
+.dp,
+.main-dp,
+.dp-tooltip{
+    object-fit: cover;
+    height: 34px;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.dp-tooltip{
+    height: 50px;
+    margin-right: 10px;
+}
+
+.dp-tooltip-title{
+    font-weight: 700;
+}
+
+.dp-tooltip-subs{
+    color: rgb(95, 95, 95);
+    font-size: 14px;
+}
+
+.a-v1{
+    margin-bottom: 12px;
+    position: relative;
+}
+
+.video-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 16px;
+    row-gap: 40px;
+}
+
+@media (max-width: 540px){
+    .video-grid{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (min-width: 541px) and (max-width: 900px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (min-width: 901) and (max-width: 1099){
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
+
+@media (min-width: 1100px) {
+    .video-grid{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}
+
+
+.timestamp{
+    position: absolute;
+    color: white;
+    background-color: black;
+    font-size: 12px;
+    font-weight: 500;
+    bottom: 10px;
+    right: 5px;
+    padding: 4px 5px;
+}
+
+/* .dp:hover + div {
+    opacity: 1;
+} */
+.channel-dp:hover .dp-tooltip-container {
+    opacity: 1;
+}
